@@ -1,0 +1,12 @@
+.mainHeaderWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 25px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+}

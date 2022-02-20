@@ -1,0 +1,22 @@
+.ant-btn-primary {
+  border-color: #8665f7 !important;
+  background: #8665f7 !important;
+}
+
+.ant-btn-primary > span {
+  color: #fff !important;
+}
+
+.ant-btn-primary:hover {
+  border-color: #5454dd !important;
+  background: #5454dd !important;
+}
+
+.ant-btn {
+  border: 1px solid #8665f7 !important;
+}
+
+.ant-btn:hover {
+  color: #9d80ff !important;
+  border-color: #9d80ff !important;
+}

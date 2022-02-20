@@ -1,0 +1,13 @@
+.mainContent {
+  grid-area: maincontent;
+  background-color: #f1f0f0;
+  padding: 50px;
+}
+
+.eventAdministrator {
+  display: grid;
+  grid-template-areas: "maincontent maincontent maincontent maincontent maincontent maincontent";
+  gap: 10px;
+  padding: 10px;
+  height: 98vh;
+}

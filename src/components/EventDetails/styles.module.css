@@ -1,0 +1,41 @@
+.eventDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eventLine {
+  padding-bottom: 25px;
+  margin: auto 50px;
+  border-bottom: 1px solid #cac2e5;
+}
+
+.eventLogo{
+    width: 60%;
+}
+
+.leftSide {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightSide {
+  width: 65%;
+  text-align: left;
+}
+
+.eventWrapper {
+  display: flex;
+}
+
+.eventHeader {
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 15px;
+  width: 90px;
+}
+
+.tagEvent {
+  text-align: center;
+}

@@ -1,0 +1,28 @@
+.ant-upload.ant-upload-select-picture-card {
+  width: 160px !important;
+  height: 160px !important;
+}
+
+.ant-input-group-addon .ant-select {
+  width: 90px;
+}
+
+.ant-input:focus {
+  border-color: #8665f7 !important;
+}
+
+.ant-input:hover {
+  border-color: #8665f7 !important;
+}
+
+.ant-picker:focus {
+    border-color: #8665f7 !important;
+}
+
+.ant-picker:hover {
+    border-color: #8665f7 !important;
+}
+
+.ant-picker-focused {
+    border-color: #8665f7 !important;
+}

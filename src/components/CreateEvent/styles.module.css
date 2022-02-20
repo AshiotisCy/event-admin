@@ -1,0 +1,27 @@
+.fieldWrapper {
+  display: flex;
+}
+
+.leftSide {
+  width: 30%;
+}
+
+.rightSide {
+  width: 65%;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.selectionPicker {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.datePicker,
+.selectPicker,
+.select {
+  width: 48%;
+}

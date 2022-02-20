@@ -1,0 +1,48 @@
+.eventWrapper {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+
+.eventBtn,
+.eventBtnActive {
+  color: #000;
+  border: none;
+  padding: 15px;
+  min-height: 30px;
+  min-width: 120px;
+  cursor: pointer;
+  border: 1px solid #8665f7;
+}
+
+.eventBtn:hover {
+  background-color: #5454dd;
+  transition: 0.7s;
+  color: #fff;
+}
+
+.createEventBtn {
+  background-color: #5454dd;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  min-height: 30px;
+  min-width: 120px;
+  cursor: pointer;
+}
+
+.createEventBtn:hover {
+  background-color: #002ead;
+  transition: 0.7s;
+}
+
+.eventBtnActive {
+  background: #5454dd;
+  color: #fff;
+}
+
+.eventBtnActive:hover {
+  background-color: #5454dd;
+  transition: 0.7s;
+  color: #fff;
+}
