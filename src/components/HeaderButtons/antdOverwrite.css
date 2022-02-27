@@ -1,0 +1,12 @@
+.ant-modal-header{
+    background: #8665f7 !important;
+}
+
+.ant-modal-title {
+    color: white !important;
+    font-weight: normal !important;
+}
+
+.ant-modal-close-icon svg {
+    fill: white !important
+}

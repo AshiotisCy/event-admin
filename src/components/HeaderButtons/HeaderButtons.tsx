@@ -1,8 +1,9 @@
 import { useState } from "react";
-import styles from "./styles.module.css";
 import classNames from "classnames";
 import btnTypes from "../../enums/btnTypes";
 import { useResponsiveBreakPoints } from "../../hooks/responsiveHook";
+import styles from "./styles.module.css";
+import './antdOverwrite.css'
 
 const HeaderButtons = (props: {
   showModal: () => void;
