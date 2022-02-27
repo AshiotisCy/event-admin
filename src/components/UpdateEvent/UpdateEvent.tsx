@@ -30,6 +30,7 @@ const UpdateEvent = (props: {
   const [location, setLocation] = useState<string | undefined>();
   const [loading, setLoading] = useState(false);
   const [outDate, setOutDate] = useState<any>();
+  const [previousDate, setPreviousDate] = useState("")
 
   useEffect(() => {
     if (eventProps && Object.entries(eventProps).length > 1) {
@@ -41,7 +42,7 @@ const UpdateEvent = (props: {
       setStatus(eventProps.status);
       setLocation(eventProps.location);
     }
-  },[eventProps]);
+  }, [eventProps]);
 
   const onDateChange = (date: any, dateString: string) => {
     setEventDate(dateString);
@@ -66,11 +67,21 @@ const UpdateEvent = (props: {
       status: status,
     };
     setPayload(constructPayload);
-
-  }, [eventId, imageUrl, eventName, website, location, status, eventDate, setPayload]);
+  }, [
+    eventId,
+    imageUrl,
+    eventName,
+    website,
+    location,
+    status,
+    eventDate,
+    setPayload,
+  ]);
 
   return (
-    <div className={!isMobile ? styles.fieldWrapper : styles.fieldWrapperMobile}>
+    <div
+      className={!isMobile ? styles.fieldWrapper : styles.fieldWrapperMobile}
+    >
       <div className={!isMobile ? styles.leftSide : styles.lefSideMobile}>
         <UploadImage
           setLoading={setLoading}
@@ -95,11 +106,13 @@ const UpdateEvent = (props: {
           />
         </div>
         <div className={styles.selectionPicker}>
-          <DatePicker
-            defaultValue={moment(eventProps?.date)}
-            onChange={(date, stringDate) => onDateChange(date, stringDate)}
-            className={styles.datePicker}
-          />
+          {eventProps?.date === eventDate ? (
+            <DatePicker
+              defaultValue={moment(eventProps?.date)}
+              onChange={(date, stringDate) => onDateChange(date, stringDate)}
+              className={styles.datePicker}
+            />
+          ) : null}
           <Select
             value={status}
             placeholder="Select Status"
