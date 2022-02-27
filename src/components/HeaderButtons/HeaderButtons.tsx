@@ -39,7 +39,7 @@ const HeaderButtons = (props: {
   });
 
   const upcomingEventsBtn = classNames(styles.eventBtn, {
-    [styles.eventBtnActive]: key === btnTypes.doneBtn,
+    [styles.eventBtnActive]: key === btnTypes.upcomingBtn,
   });
 
   const canceledEventsBtn = classNames(styles.eventBtn, {
