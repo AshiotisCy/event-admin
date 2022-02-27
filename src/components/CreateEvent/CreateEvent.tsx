@@ -4,6 +4,7 @@ import { useState } from "react";
 import moment from "moment";
 import statusTypes from "../../enums/statusTypes";
 import cityNames from "../../enums/cityNames";
+import { useResponsiveBreakPoints } from "../../hooks/responsiveHook";
 import styles from "./styles.module.css";
 import "./antdOverwrite.css";
 
@@ -24,6 +25,10 @@ const CreateEvent = (props: {
   onSelectLocationChange: (value: string) => void;
 }) => {
   const { Option } = Select;
+
+  const { isExtraExtraSmall, isExtraSmall, isSmall, isMedium } =
+    useResponsiveBreakPoints();
+  const isMobile = isExtraExtraSmall || isExtraSmall || isSmall || isMedium;
 
   const getCurrentDate = moment().format("YYYY-MM-DD");
   const [date, setDate] = useState("");
@@ -50,8 +55,8 @@ const CreateEvent = (props: {
   );
 
   return (
-    <div className={styles.fieldWrapper}>
-      <div className={styles.leftSide}>
+    <div className={!isMobile ? styles.fieldWrapper : styles.fieldWrapperMobile}>
+      <div className={!isMobile ? styles.leftSide : styles.lefSideMobile}>
         <UploadImage
           setLoading={props.setLoading}
           setImageUrl={props.setImageUrl}
@@ -59,7 +64,7 @@ const CreateEvent = (props: {
           loading={props.loading}
         />
       </div>
-      <div className={styles.rightSide}>
+      <div className={!isMobile ? styles.rightSide : styles.rightSideMobile}>
         <div className={styles.field}>
           <Input
             value={props.eventName}

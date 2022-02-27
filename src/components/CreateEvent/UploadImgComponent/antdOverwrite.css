@@ -5,3 +5,9 @@
 .ant-upload.ant-upload-select-picture-card:hover {
     border-color: #8665f7 !important;
 }
+
+.mobileAvatar{
+    display: flex !important;
+    width: 100%;
+    justify-content: center;
+}

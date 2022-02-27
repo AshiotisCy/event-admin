@@ -1,0 +1,63 @@
+.collapseHeaderWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+}
+
+.eventName {
+  width: 20%;
+  margin-right: 15px;
+}
+
+.date {
+  width: 20%;
+  text-align: center;
+}
+
+.status {
+  width: 20%;
+  text-align: center;
+}
+
+.antTag {
+  min-width: 75px;
+  text-align: center;
+  height: 25px !important;
+}
+
+.mobileBodyWrapper {
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+}
+
+.tableCellImage {
+  width: 20%;
+}
+
+.mobileWrapperInformation {
+  margin: 0 8px 30px 8px;
+}
+
+.mobileImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.mobileBtnWrapper {
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+
+.antButtonTag {
+  display: flex !important;
+  width: 51%;
+  justify-content: space-evenly;
+  margin: 0 8px !important;
+  align-items: center;
+}

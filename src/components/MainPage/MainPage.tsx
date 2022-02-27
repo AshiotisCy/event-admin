@@ -9,7 +9,7 @@ import { TableMockData } from "../MockData/MockData";
 import EventsComponent from "../EventsComponent/EventsComponent";
 import HeaderButtons from "../HeaderButtons/HeaderButtons";
 import Moment from "react-moment";
-import styles from './styles.module.css'
+import styles from "./styles.module.css";
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -44,6 +44,9 @@ const MainPage = () => {
         break;
       case "Canceled Events":
         setSelectedEvents(data.filter((event) => event.status === "Canceled"));
+        break;
+      case "Done Events":
+        setSelectedEvents(data.filter((event) => event.status === "Done"));
         break;
       default:
         setSelectedEvents(data);

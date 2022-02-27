@@ -1,6 +1,7 @@
 import { Upload, message } from "antd";
 import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 import './antdOverwrite.css'
+import { useResponsiveBreakPoints } from "../../../hooks/responsiveHook";
 
 const getBase64 = (img: any, callback: any) => {
   const reader = new FileReader();
@@ -21,6 +22,11 @@ const beforeUpload = (file: any) => {
 };
 
 const UploadImage = (props: {setLoading: (value: boolean) => void, imageUrl:string, setImageUrl: (value: string) => void, loading: boolean}) => {
+
+  
+  const { isExtraExtraSmall, isExtraSmall, isSmall, isMedium } =
+    useResponsiveBreakPoints();
+  const isMobile = isExtraExtraSmall || isExtraSmall || isSmall || isMedium;
 
   const handleChange = (info: {
     file: { status: string; originFileObj: any };
@@ -48,7 +54,7 @@ const UploadImage = (props: {setLoading: (value: boolean) => void, imageUrl:stri
     <Upload
       name="avatar"
       listType="picture-card"
-      className="avatar-uploader"
+      className={isMobile ? "mobileAvatar" : "" }
       showUploadList={false}
       action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
       beforeUpload={beforeUpload}

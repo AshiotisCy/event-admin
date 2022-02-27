@@ -7,7 +7,21 @@ const createEvent = (event: EventsInterface) => {
     }
 }
 
+const updateEvent = (event: EventsInterface) => {
+    return {
+        type: "UPDATE_EVENT",
+        payload: event
+    }
+}
+
+const deleteEvent = (event: EventsInterface) => {
+    return {
+        type: "DELETE_EVENT",
+        payload: event
+    }
+}
+
 
 export {
-    createEvent
+    createEvent, updateEvent, deleteEvent
 }

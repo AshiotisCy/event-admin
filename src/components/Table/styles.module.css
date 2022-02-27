@@ -17,21 +17,26 @@
   display: table-cell;
   width: 15%;
   text-align: center;
-  padding: 4px 0;
+  padding: 4px 5px;
   border-right: 1px solid #d6d4d4;
   vertical-align: middle;
+  word-break: break-word;
 }
 
 .tableCell p {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .tableCell:last-child {
-    border-right: none;
+  border-right: none;
 }
 
-.tableCellImage{
-    width: 35%;
+.tableCell:first-child {
+  cursor: pointer;
+}
+
+.tableCellImage {
+  width: 35%;
 }
 
 .tableRow,
@@ -47,15 +52,32 @@
   box-shadow: 0 1px 4px 0 rgba(0, 0, 50, 0.3);
 }
 
-.tableRow{
-    cursor: pointer;
-}
-
-.tableRow:hover{
-    background: #ebe5ff;
+.tableRow:hover {
+  background: #ebe5ff;
 }
 
 .antTag {
-    width: 100px;
+  width: 100px;
 }
 
+.statusCellWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.statusCell {
+}
+
+.buttonsWrapper {
+}
+
+.deleteBtn {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.editBtn {
+  cursor: pointer;
+  margin-top: 5px;
+}
