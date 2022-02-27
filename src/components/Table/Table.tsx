@@ -12,7 +12,6 @@ import MobileHeaders from "./MobileTable/MobileHeaders";
 import MobileBody from "./MobileTable/MobileBody";
 import styles from "./styles.module.css";
 import "./antdOverwrite.css";
-import { useState } from "react";
 
 const Table = (props: {
   tableProps: EventInterface[];
@@ -37,13 +36,11 @@ const Table = (props: {
     <div className={styles.tableBox}>
       {!isMobile ? (
         <div className={styles.tableHead}>
-          {TableHeaders.map((head) => {
-            return (
-              <div className={styles.tableCell} key={head.id}>
-                <p>{head.name}</p>
-              </div>
-            );
-          })}
+          {TableHeaders.map((head) => (
+            <div className={styles.tableCell} key={head.id}>
+              <p>{head.name}</p>
+            </div>
+          ))}
         </div>
       ) : null}
       {Props.length > 0 ? (
@@ -128,7 +125,7 @@ const Table = (props: {
                     </div>
                   </div>
                 ) : (
-                  <Collapse onChange={() => {}} key={prop.id}>
+                  <Collapse key={prop.id}>
                     <Panel header={MobileHeaders(prop)} key={prop.id}>
                       <MobileBody
                         eventProps={prop}
