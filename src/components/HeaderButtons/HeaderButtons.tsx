@@ -3,7 +3,7 @@ import classNames from "classnames";
 import btnTypes from "../../enums/btnTypes";
 import { useResponsiveBreakPoints } from "../../hooks/responsiveHook";
 import styles from "./styles.module.css";
-import './antdOverwrite.css'
+import "./antdOverwrite.css";
 
 const HeaderButtons = (props: {
   showModal: () => void;
@@ -12,27 +12,12 @@ const HeaderButtons = (props: {
   const { isExtraExtraSmall, isExtraSmall, isSmall } =
     useResponsiveBreakPoints();
   const isMobile = isExtraExtraSmall || isExtraSmall || isSmall;
-  
+
   const [key, setKey] = useState(1);
 
   const onBtnClick = (value: string, key: number) => {
     props.setTitle(value);
-    switch (key) {
-      case 1:
-        setKey(1);
-        break;
-      case 2:
-        setKey(2);
-        break;
-      case 3:
-        setKey(3);
-        break;
-      case 4:
-        setKey(4);
-        break;
-      default:
-        setKey(btnTypes.activeBtn);
-    }
+    setKey(key);
   };
 
   const allEventsBtn = classNames(styles.eventBtn, {
@@ -53,7 +38,9 @@ const HeaderButtons = (props: {
 
   return (
     <>
-      <div className={!isMobile ? styles.eventWrapper : styles.eventWrapperMobile}>
+      <div
+        className={!isMobile ? styles.eventWrapper : styles.eventWrapperMobile}
+      >
         <button
           className={allEventsBtn}
           onClick={() => onBtnClick("All Events", btnTypes.activeBtn)}
